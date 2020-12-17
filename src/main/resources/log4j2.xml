@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Default logging configuration.
+-->
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{HH:mm:ss.SSS}][%highlight{%-5level}] %message%n%rException{full}"/>
+        </Console>
+
+    </Appenders>
+    <Loggers>
+        <!-- Our own loggers -->
+        <logger name="Main" level="info"/>
+
+        <Root level="info">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
